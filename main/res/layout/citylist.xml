@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/citylist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:text="城市列表"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:layout_centerVertical="true"
+			    android:clickable="true"
+			    android:onClick="back"
+			    android:text=" × "
+			    android:textColor="#000000"
+			    android:textSize="40sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >        
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="城市名称："
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 添加 "
+            android:textSize="18sp" />
+    </LinearLayout>
+
+	<TextView
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center"
+    	android:text="定制城市"
+    	android:textColor="#808080"
+    	android:textSize="18sp" />
+	<View
+    	android:layout_width="fill_parent"
+    	android:layout_height="1px"
+    	android:background="#808080" />
+	<GridView
+    	android:id="@+id/gridView1"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:horizontalSpacing="10dp"
+    	android:numColumns="4"
+    	android:verticalSpacing="10dp" />    
+	<TextView
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_gravity="center"
+    	android:text="热门城市"
+    	android:textColor="#808080"
+    	android:textSize="18sp" />
+	<View
+    	android:layout_width="fill_parent"
+    	android:layout_height="1px"
+    	android:background="#808080" />
+	<GridView
+    	android:id="@+id/gridView2"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:horizontalSpacing="10dp"
+    	android:numColumns="4"
+    	android:verticalSpacing="10dp" />
+</LinearLayout>

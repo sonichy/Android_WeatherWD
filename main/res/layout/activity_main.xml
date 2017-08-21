@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/weatherf"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+ 	<ImageView
+      	android:id="@+id/bg"
+      	android:layout_width="fill_parent"
+      	android:layout_height="fill_parent"
+      	android:scaleType="fitXY"
+      	android:src="@drawable/bgqing" />
+  
+ 	<TextView
+     	android:id="@+id/city"
+     	android:layout_width="wrap_content"
+     	android:layout_height="wrap_content"
+     	android:layout_centerHorizontal="true"
+     	android:clickable="true"
+     	android:onClick="citylist"
+     	android:padding="5dp"
+     	android:text="衡阳"
+     	android:textColor="#ffffff"
+     	android:textSize="20sp"
+     	android:textStyle="bold" />
+ 	
+    <TextView
+        android:id="@+id/updatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:clickable="true"
+        android:onClick="refresh"
+        android:text="更新"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/tempnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="25°C"
+        android:textColor="#ffffff"
+        android:textSize="50sp" />
+
+ 	
+	
+    <TextView
+        android:id="@+id/weather0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/temp0"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:text="多云"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/temp0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/wind0"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:text="28°~24°"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/wind0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/humidity"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:text="北风2级"
+        android:textColor="#ffffff" />
+    
+	<TextView
+    	android:id="@+id/humidity"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_above="@+id/today"
+    	android:layout_alignParentLeft="true"
+    	android:layout_gravity="left"
+    	android:layout_marginLeft="10dp"
+    	android:text="湿度：82%"
+    	android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/future"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="2014年8月15日星期五"
+        android:textColor="#ffffff" />
+
+  	<LinearLayout
+    	android:id="@+id/future"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentBottom="true"
+    	android:gravity="center_horizontal"
+    	android:orientation="horizontal"
+    	android:paddingBottom="5dp" />
+  	
+  	<TextView
+ 	    android:id="@+id/aqi"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_below="@id/tempnow"
+ 	    android:layout_marginLeft="10dp"
+ 	    android:onClick="showAQIS"
+ 	    android:padding="5dp"
+ 	    android:textColor="#FFFFFF" />
+ 	
+	<WebView
+	    android:id="@+id/aqis"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/tempnow"
+	    android:layout_marginLeft="10dp"
+	    android:layout_toRightOf="@id/aqi"
+	    android:padding="5dp"
+	    android:textColor="#FFFFFF"
+	    android:visibility="invisible" />
+ 
+</RelativeLayout>

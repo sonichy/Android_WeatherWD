@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hy.weatherwd"
+    android:versionCode="5"
+    android:versionName="5.12" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:name=".MainApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="微度天气"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.hy.weatherwd.MainActivity"
+            android:label="微度天气"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CityList"
+            android:label="微度天气"
+            android:screenOrientation="portrait" >         
+        </activity>
+        <receiver android:name="com.hy.weatherwd.WidgetProvider" android:label="@string/app_name"> 
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.hy.weatherwd.updateWidget"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_provider" /> 
+        </receiver>    
+    </application>
+
+</manifest>
