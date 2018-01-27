@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hy.weatherwd"
+    package="com.hty.weatherwd"
     android:versionCode="5"
-    android:versionName="5.12" >
+    android:versionName="5.13" >
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-sdk
@@ -10,12 +10,12 @@
         android:targetSdkVersion="17" />
 
     <application
-        android:name=".MainApplication"
+        android:name="com.hty.weatherwd.MainApplication"
         android:icon="@drawable/ic_launcher"
         android:label="微度天气"
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
-            android:name="com.hy.weatherwd.MainActivity"
+            android:name="com.hty.weatherwd.MainActivity"
             android:label="微度天气"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -24,14 +24,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CityList"
+            android:name="com.hty.weatherwd.CityList"
             android:label="微度天气"
             android:screenOrientation="portrait" >         
         </activity>
-        <receiver android:name="com.hy.weatherwd.WidgetProvider" android:label="@string/app_name"> 
+        <receiver android:name="com.hty.weatherwd.WidgetProvider" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.hy.weatherwd.updateWidget"/>
+                <action android:name="com.hty.weatherwd.updateWidget"/>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_provider" /> 
